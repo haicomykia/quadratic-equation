@@ -1,9 +1,7 @@
 package com.equation.equation.quadratic;
-import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.StringJoiner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import com.equation.coefficient.coefficient.Coefficient;
@@ -112,6 +110,6 @@ public class QuadraticEquation implements Equation {
 
     @Override
     public List<Complex> getAnswers() {
-        return this.answers;
+        return Collections.unmodifiableList(this.answers);
     }
 }

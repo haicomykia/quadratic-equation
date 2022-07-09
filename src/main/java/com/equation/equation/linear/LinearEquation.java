@@ -1,6 +1,7 @@
 package com.equation.equation.linear;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -53,6 +54,6 @@ public class LinearEquation implements Equation {
 
     @Override
     public List<Complex> getAnswers() {
-        return this.answers;
+        return Collections.unmodifiableList(this.answers);
     }
 }
